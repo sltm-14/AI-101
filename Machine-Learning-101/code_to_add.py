@@ -1,13 +1,13 @@
-#Import data
-import pandas as pd
-pd.read_csv('music.csv')
-music_data
+from sklearn.model_selection import train_test_split #to split our sets for trraining and test
+from sklearn.metrics import accuracy_score # to calculate the accuracy of our predictions
 
-# Clean data: Remove duplicates, null data, etc
+#y = music_...
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2) # we take 20% of our set for testing, returns a tupple
+# X = inputs for training and testing
+# y = oututs for training and testing
 
-# Split data into inputs and outputs
-X = music_data.drop(columns=['genre']) """Creates a new data set without genre column"""
-X
+model = decisionTreeClassifier()
+model.fir(X_train, y_train)
+predictions = model.redict(X_test)
 
-Y = music_data['genre']
-Y
+score = accuracy_score(y_test, predictions) # Check the accuracy of our predictions, 1 = 100%
