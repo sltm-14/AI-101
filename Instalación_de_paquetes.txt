@@ -1,0 +1,40 @@
+conda create -n MLenv python=3.8 scikit-learn numpy matplotlib scipy pandas jupyter
+conda install python = 3.8
+
+conda install ipython
+
+pip install scikit-learn
+pip install numpy 
+pip install matplotlib 
+pip install scipy 
+pip install pandas 
+
+Para GPU
+conda install tensorflow-gpu
+conda install pytorch torchvision cudatoolkit -c pytorch
+
+
+Gráficas
+conda install -c conda-forge geopandas
+conda install descartes
+pip install geopandas
+pip install seaborns
+pip install folium
+pip install bokeh
+
+SQL
+conda install -c conda-forge ipython-sql
+conda install -c anaconda sqlalchemy
+conda install -c anaconda pymysql
+
+conda install -c anaconda cx_oracle
+
+Big Data
+pip install pyspark
+
+conda deactivate
+conda remove --name MLenv --all
+conda env remove -n MLenv
+conda info --envs
+
+Si hay algun problema puedes usar conda update
